@@ -1,0 +1,50 @@
+create table tb_cliente(
+	codCliente int not null
+	nomeCliente varchar (50)
+	emailCliente (50)
+	telefoneFixoCliente int
+	telefoneCelCliente	int
+	enderecoCliente varchar (50)
+	bairroCliente varchar (50)
+	cepCliente int (8 ou 9 com traço)
+	numeroResidenciaCliente varchar 
+	complementoCliente varchar
+	primary key (codCliente)
+);
+
+create table tb_animal(
+	codAnimal int not null 
+	nomeAnimal varchar (50)
+	descricaoAnimal varchar (50)
+	sexoAnimal boolean
+	primary key (codAnimal)
+
+);
+
+create table tb_veterinario(
+	
+);
+
+create table tb_consulta(
+
+);
+
+create table tb_funcionario(
+
+);
+
+create table tb_login(
+
+);
+
+create table tb_servicos(
+
+);
+
+create table tb_marca(
+
+);
+
+create table tb_tem(
+
+);

@@ -1,0 +1,59 @@
+     1- COLOCAR ISSO NA TABELA ONDE VC QUER QUE APAREÇA (BLL)
+
+   public DataTable listarTipoAnimalCombobox()
+        {
+            try
+            {//listar tipo de animais da tabela tipo na tabela AnimaisXClientes
+                DataTable dt = new DataTable();
+                dt = animaisClienteDao.listarTipoAnimalCombobox();
+
+
+                return dt;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+
+2- COLOCAR SÓ O CAMPO CHAVE E O CAMPO QUE VAI APARECER NO COMBOBOX(DAO)
+
+        public DataTable listarTipoAnimalCombobox()
+        {
+            try
+            {
+
+                AbrirConexao();
+
+                DataTable dt = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                comando = new MySqlCommand("SELECT nome_tipo_animal,cod_tipo_animal FROM tb_tipo_animal", conection);
+                da.SelectCommand = comando;
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                FecharConexao();
+            }
+
+        }
+
+3- COLOCAR NA CLASSE DO FORMULÁRIO , DEPOIS QUE CRIAR ESSA CLASSE,
+CHAMAR ESSE MÉTODO NO INIT E NO LOAD DO FORMULÁRIO
+
+        public void listarTipoAnimal()
+        {//método para chamar o campo nome tipoAnimal dentro do combobox
+            AnimalClienteBLL animalclientebll = new AnimalClienteBLL();
+            this.cb_tipo_animal.DataSource = animalclientebll.listarTipoAnimalCombobox();
+            this.cb_tipo_animal.ValueMember = "cod_tipo_animal";
+            this.cb_tipo_animal.DisplayMember = "nome_tipo_animal";
+            //no cb_tipo_animal, o datasource é refenciado e mostra o comando que esta no método listar, que vem da classe clienteDAO
+        }

@@ -1,0 +1,35 @@
+Botão direito no item References abaixo do solution explorer
+Add Service References:
+COlar o link abaixo
+https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl
+
+Dentro do namespace , chamar o using:
+
+using WebServiceCorreios;
+
+Método para localizar cep:
+
+        private void LocalizaCep(string cep)
+        {
+            using (var ws = new AtendeClienteClient())
+            {
+                var resposta = ws.consultaCEP(cep);
+
+                txtEndereco.Text = resposta.end;
+                txtBairro.Text = resposta.bairro;
+                txt_cidade.Text = resposta.cidade;
+                txt_estado.Text = resposta.uf;
+            } 
+        }
+
+no evento do botão:
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LocalizaCep(txtCep.Text);
+        }
+
+
+Se por acaso os Exceptions reclamarem , adicionar System na frente, exemplo:
+
+catch (System.Exception erro)

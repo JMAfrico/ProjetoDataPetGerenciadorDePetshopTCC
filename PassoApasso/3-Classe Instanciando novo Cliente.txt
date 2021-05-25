@@ -1,0 +1,25 @@
+using System.Text;
+using Consultas_medicas.Models;
+using Consultas_medicas.DAO;
+using System.Data;
+using Ferramentas;
+
+namespace Consultas_medicas.BLL
+{
+    public class ClienteBLL
+    {
+        ClientesDAO clientesDAO = new ClientesDAO();
+		
+
+        public void salvar(Clientes clientes)
+        {//salvar clientes
+            try
+            {
+                clientesDAO.Salvar(clientes);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+        }

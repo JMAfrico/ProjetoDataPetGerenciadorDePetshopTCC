@@ -1,0 +1,52 @@
+        private void salvar(Clientes clientes)
+        {
+            try
+            {
+                if (txtNome.Text.Trim() == string.Empty || txtEmail.Text.Trim() == string.Empty || txttelCelular.Text.Trim() == string.Empty ||
+                    txtEndereco.Text.Trim() == string.Empty || txtNumero.Text.Trim() == string.Empty || txtBairro.Text.Trim() == string.Empty ||
+                    txtCep.Text.Trim() == string.Empty || txtComplemento.Text.Trim() == string.Empty || txtCPF2.Text.Trim() == string.Empty || txtAnimal.SelectedValue == null ) 
+                {
+                    MessageBox.Show("Informações obrigatórias não preenchidas", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    ClienteBLL clienteBLL = new ClienteBLL();
+
+                    clientes.nomeCliente = txtNome.Text;
+                    clientes.emailCliente = txtEmail.Text;
+                    clientes.telefoneCelularCli = Convert.ToInt64(txttelCelular.Text);
+                    clientes.telefoneFixoCli = Convert.ToInt64(txtelFixo.Text);
+                    clientes.enderecoCliente = txtEndereco.Text;
+                    clientes.numeroResidenciaCliente = Convert.ToInt32(txtNumero.Text);
+                    clientes.bairroCliente = txtBairro.Text;
+                    clientes.cepCliente = txtCep.Text;
+                    clientes.ComplementoCliente = txtComplemento.Text;
+                    clientes.cpfCliente = txtCPF2.Text;
+                    clientes.CodAnimal = txtAnimal.SelectedValue.ToString();
+
+                    clienteBLL.salvar(clientes);//modificado
+
+                    MessageBox.Show("Cliente CADASTRADO com sucesso !", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limparCampos();
+                    listarClientes();
+                    lblCPF.Visible = false;
+                }
+
+            }
+            catch(MySqlException erro)
+            {
+                MessageBox.Show("Informação Incorreta : CPF já existe \n" + erro.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                                       
+        }
+
+
+        private void btn_salvar_medico_Click(object sender, EventArgs e)
+        {//método para salvar
+            if (MessageBox.Show("Confirma os dados ?", "SALVAR CLIENTE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Clientes clientes = new Clientes();
+                salvar(clientes);
+            }
+                  
+
+        }

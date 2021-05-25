@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="petshopDataSet" targetNamespace="http://tempuri.org/petshopDataSet.xsd" xmlns:mstns="http://tempuri.org/petshopDataSet.xsd" xmlns="http://tempuri.org/petshopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="petshopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="petshopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Consultas_medicas.Properties.Settings.GlobalReference.Default.petshopConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_animalTableAdapter" GeneratorDataComponentClassName="tb_animalTableAdapter" Name="tb_animal" UserDataComponentName="tb_animalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_animal" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codAnimal`, `sexoAnimal`, `descricaoAnimal`, `nomeAnimal` FROM `tb_animal`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_atendimentoTableAdapter" GeneratorDataComponentClassName="tb_atendimentoTableAdapter" Name="tb_atendimento" UserDataComponentName="tb_atendimentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_atendimento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codAnimal`, `codVeterinario` FROM `tb_atendimento`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_clienteTableAdapter" GeneratorDataComponentClassName="tb_clienteTableAdapter" Name="tb_cliente" UserDataComponentName="tb_clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CodCliente`, `CodAnimal`, `nomeCliente`, `emailCliente`, `TelefoneCelularCli`, `TelefoneFixoCli`, `enderecoCliente`, `numeroResidenciaCliente`, `bairroCliente`, `cepCliente`, `complementoCliente`, `cpfCliente` FROM `tb_cliente`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_consultaTableAdapter" GeneratorDataComponentClassName="tb_consultaTableAdapter" Name="tb_consulta" UserDataComponentName="tb_consultaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_consulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codConsulta`, `relatoConsulta`, `dataConsulta`, `horaConsulta` FROM `tb_consulta`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_funcionarioTableAdapter" GeneratorDataComponentClassName="tb_funcionarioTableAdapter" Name="tb_funcionario" UserDataComponentName="tb_funcionarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_funcionario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codFuncionario`, `nomeFuncionario`, `sobrenomeFuncionario`, `emailFuncionario`, `telefoneFixoFunc`, `telefoneCelularFunc`, `enderecoFuncionario`, `bairroFuncionario`, `cepFuncionario`, `numeroResidenciaFuncionario`, `complementoFuncionario` FROM `tb_funcionario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_loginTableAdapter" GeneratorDataComponentClassName="tb_loginTableAdapter" Name="tb_login" UserDataComponentName="tb_loginTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_login" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codUsuario`, `nomeUsuario`, `senhaUsuario` FROM `tb_login`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_marcaTableAdapter" GeneratorDataComponentClassName="tb_marcaTableAdapter" Name="tb_marca" UserDataComponentName="tb_marcaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_marca" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codFuncionario`, `codConsulta` FROM `tb_marca`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_temTableAdapter" GeneratorDataComponentClassName="tb_temTableAdapter" Name="tb_tem" UserDataComponentName="tb_temTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_tem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codAnimal`, `codConsulta` FROM `tb_tem`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_veterinarioTableAdapter" GeneratorDataComponentClassName="tb_veterinarioTableAdapter" Name="tb_veterinario" UserDataComponentName="tb_veterinarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="petshopConnectionString (Settings)" DbObjectName="petshop.tb_veterinario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `codVeterinario`, `nomeVeterinario`, `sobrenomeVeterinario`, `crmv`, `especializacao`, `enderecoVeterinario`, `bairroVeterinario`, `cepVeterinario`, `numeroResidenciaVeterinario`, `complementoVeterinario`, `emailVeterinario`, `telefoneFixoVet`, `telefoneCelularVet` FROM `tb_veterinario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="petshopDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="petshopDataSet" msprop:Generator_UserDSName="petshopDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tb_animal" msprop:Generator_TableClassName="tb_animalDataTable" msprop:Generator_TableVarName="tabletb_animal" msprop:Generator_TablePropName="tb_animal" msprop:Generator_RowDeletingName="tb_animalRowDeleting" msprop:Generator_RowChangingName="tb_animalRowChanging" msprop:Generator_RowEvHandlerName="tb_animalRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_animalRowDeleted" msprop:Generator_UserTableName="tb_animal" msprop:Generator_RowChangedName="tb_animalRowChanged" msprop:Generator_RowEvArgName="tb_animalRowChangeEvent" msprop:Generator_RowClassName="tb_animalRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_atendimento" msprop:Generator_TableClassName="tb_atendimentoDataTable" msprop:Generator_TableVarName="tabletb_atendimento" msprop:Generator_TablePropName="tb_atendimento" msprop:Generator_RowDeletingName="tb_atendimentoRowDeleting" msprop:Generator_RowChangingName="tb_atendimentoRowChanging" msprop:Generator_RowEvHandlerName="tb_atendimentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_atendimentoRowDeleted" msprop:Generator_UserTableName="tb_atendimento" msprop:Generator_RowChangedName="tb_atendimentoRowChanged" msprop:Generator_RowEvArgName="tb_atendimentoRowChangeEvent" msprop:Generator_RowClassName="tb_atendimentoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_cliente" msprop:Generator_TableClassName="tb_clienteDataTable" msprop:Generator_TableVarName="tabletb_cliente" msprop:Generator_TablePropName="tb_cliente" msprop:Generator_RowDeletingName="tb_clienteRowDeleting" msprop:Generator_RowChangingName="tb_clienteRowChanging" msprop:Generator_RowEvHandlerName="tb_clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_clienteRowDeleted" msprop:Generator_UserTableName="tb_cliente" msprop:Generator_RowChangedName="tb_clienteRowChanged" msprop:Generator_RowEvArgName="tb_clienteRowChangeEvent" msprop:Generator_RowClassName="tb_clienteRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_consulta" msprop:Generator_TableClassName="tb_consultaDataTable" msprop:Generator_TableVarName="tabletb_consulta" msprop:Generator_TablePropName="tb_consulta" msprop:Generator_RowDeletingName="tb_consultaRowDeleting" msprop:Generator_RowChangingName="tb_consultaRowChanging" msprop:Generator_RowEvHandlerName="tb_consultaRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_consultaRowDeleted" msprop:Generator_UserTableName="tb_consulta" msprop:Generator_RowChangedName="tb_consultaRowChanged" msprop:Generator_RowEvArgName="tb_consultaRowChangeEvent" msprop:Generator_RowClassName="tb_consultaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_funcionario" msprop:Generator_TableClassName="tb_funcionarioDataTable" msprop:Generator_TableVarName="tabletb_funcionario" msprop:Generator_TablePropName="tb_funcionario" msprop:Generator_RowDeletingName="tb_funcionarioRowDeleting" msprop:Generator_RowChangingName="tb_funcionarioRowChanging" msprop:Generator_RowEvHandlerName="tb_funcionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_funcionarioRowDeleted" msprop:Generator_UserTableName="tb_funcionario" msprop:Generator_RowChangedName="tb_funcionarioRowChanged" msprop:Generator_RowEvArgName="tb_funcionarioRowChangeEvent" msprop:Generator_RowClassName="tb_funcionarioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_login" msprop:Generator_TableClassName="tb_loginDataTable" msprop:Generator_TableVarName="tabletb_login" msprop:Generator_TablePropName="tb_login" msprop:Generator_RowDeletingName="tb_loginRowDeleting" msprop:Generator_RowChangingName="tb_loginRowChanging" msprop:Generator_RowEvHandlerName="tb_loginRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_loginRowDeleted" msprop:Generator_UserTableName="tb_login" msprop:Generator_RowChangedName="tb_loginRowChanged" msprop:Generator_RowEvArgName="tb_loginRowChangeEvent" msprop:Generator_RowClassName="tb_loginRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_marca" msprop:Generator_TableClassName="tb_marcaDataTable" msprop:Generator_TableVarName="tabletb_marca" msprop:Generator_TablePropName="tb_marca" msprop:Generator_RowDeletingName="tb_marcaRowDeleting" msprop:Generator_RowChangingName="tb_marcaRowChanging" msprop:Generator_RowEvHandlerName="tb_marcaRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_marcaRowDeleted" msprop:Generator_UserTableName="tb_marca" msprop:Generator_RowChangedName="tb_marcaRowChanged" msprop:Generator_RowEvArgName="tb_marcaRowChangeEvent" msprop:Generator_RowClassName="tb_marcaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_tem" msprop:Generator_TableClassName="tb_temDataTable" msprop:Generator_TableVarName="tabletb_tem" msprop:Generator_TablePropName="tb_tem" msprop:Generator_RowDeletingName="tb_temRowDeleting" msprop:Generator_RowChangingName="tb_temRowChanging" msprop:Generator_RowEvHandlerName="tb_temRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_temRowDeleted" msprop:Generator_UserTableName="tb_tem" msprop:Generator_RowChangedName="tb_temRowChanged" msprop:Generator_RowEvArgName="tb_temRowChangeEvent" msprop:Generator_RowClassName="tb_temRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tb_veterinario" msprop:Generator_TableClassName="tb_veterinarioDataTable" msprop:Generator_TableVarName="tabletb_veterinario" msprop:Generator_TablePropName="tb_veterinario" msprop:Generator_RowDeletingName="tb_veterinarioRowDeleting" msprop:Generator_RowChangingName="tb_veterinarioRowChanging" msprop:Generator_RowEvHandlerName="tb_veterinarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_veterinarioRowDeleted" msprop:Generator_UserTableName="tb_veterinario" msprop:Generator_RowChangedName="tb_veterinarioRowChanged" msprop:Generator_RowEvArgName="tb_veterinarioRowChangeEvent" msprop:Generator_RowClassName="tb_veterinarioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,18 @@
+ALTERAÇÕES NO DOCUMENTO DE TCC
+-Não é necessário um minimo de digitos para salvar a senha(ADICIONADO)
+-Problema de pesquisa
+-Hipóteses
+
+
+ALTERAÇÕES QUE FALTAM NO SISTEMA
+-- alterar funcionario não está funcionando (RESOLVIDO)
+--alterar raça de animal não está funcionando (RESOLVIDO-CRIEI CHAVE PRIMARIA NA TABELA)
+--deletar raca de animal não está funcionando(RESOLVIDO)
+--pesquisar tipo de raca e animal não está funcionando(RESOLVIDO)
+--salvar relacionamento animalXcliente não está salvando a raça do animal correta(RESOLVIDO-ALTEREI O CAMPO PARA STRING)
+--alterar relacionamento animalXcliente ainda não está funcionando(RESOLVIDO)
+--excluir relacionamento animalXcliente ainda não está funcionando(RESOLVIDO)
+--pesquisar relacionamento animalXcliente ainda não está funcionando(RESOLVIDO)
+--relatórios ainda não está funcionando
+--lista de servicos não deleta item por item para diminuir valor(RESOLVIDO)
+--criar tabela adicionar lista de produtos 

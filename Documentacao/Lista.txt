@@ -1,0 +1,8 @@
+private void modoEdicao()
+--ativar botoes
+--alterar cores dos campos
+
+private void modoDefault()
+--desativar botoes
+--cores dos campos normais
+--textbox vazios

@@ -1,0 +1,15 @@
+INSTRUÇÕES PARA INSTALAÇÃO
+
+1-BAIXAR O SISTEMA NO SITE :
+https://fatecspgov-my.sharepoint.com/:f:/g/personal/joao_silva351_fatec_sp_gov_br/EnFy_ytZBYhIpHKjaIuMQ-sBbVF6nI9wTO9e-N0qV2SRMg
+
+2-PARA ACESSAR O SISTEMA, É NECESSÁRIO TER O INSTALADO O MYSQL COMUNITY INSTALADO:
+https://dev.mysql.com/downloads/
+
+3-APÓS A INSTALAÇÃO, É NECESSÁRIO IMPORTAR O BANCO DE DADOS MAIS RECENTE QUE ESTÁ NA PASTA BACKUP_BANCO. VA ATÉ A OPÇÃO DE IMPORTAR , CRIE UM NOVO "SCHEMA" com o nome PetShop_2020, localize o arquivo "petshop_2020_171120.sql"
+
+4-COM O MYSQL INSTALADO E O BANCO DE DADOS IMPORTADO, É NECESSÁRIO INSTALAR O XAMPP para o sistema ter acesso ao banco de dados:
+https://www.apachefriends.org/pt_br/index.html
+
+5-AO INSTALAR, DEIXAR AS DUAS PRIMEIRAS OPÇÕES ATIVAS : APACHE E MYSQL
+

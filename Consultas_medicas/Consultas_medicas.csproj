@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB9D37BD-179D-4D68-9D5C-386F76DDFDDA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Consultas_medicas</RootNamespace>
+    <AssemblyName>Consultas_medicas</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Consultas_medicas.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data">
+      <HintPath>conexao\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.visualstudio">
+      <HintPath>..\..\..\..\..\..\Program Files\MySQL\v2\mysql.visualstudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AnimalClienteBLL.cs" />
+    <Compile Include="BLL\ClienteBLL.cs" />
+    <Compile Include="BLL\ComprasBLL.cs" />
+    <Compile Include="BLL\ConsultaBLL.cs" />
+    <Compile Include="BLL\ConsultasClienteBLL.cs" />
+    <Compile Include="BLL\Diagnostico_medicoBLL.cs" />
+    <Compile Include="BLL\Especialidade_veterinariaBLL.cs" />
+    <Compile Include="BLL\FuncionarioBLL.cs" />
+    <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\ProdutosBLL.cs" />
+    <Compile Include="BLL\ProdutosClienteBLL.cs" />
+    <Compile Include="BLL\raca_animalBLL.cs" />
+    <Compile Include="BLL\ServicosBLL.cs" />
+    <Compile Include="BLL\StatusPagamentoBLL.cs" />
+    <Compile Include="BLL\tipo_animalBLL.cs" />
+    <Compile Include="BLL\VacinasBLL.cs" />
+    <Compile Include="BLL\VeterinarioBLL.cs" />
+    <Compile Include="Connected Services\WebServiceCorreios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AnimaisClienteDAO.cs" />
+    <Compile Include="DAO\ClientesDAO.cs" />
+    <Compile Include="DAO\ComprasDAO.cs" />
+    <Compile Include="DAO\conexao.cs" />
+    <Compile Include="DAO\ConsultasDAO.cs" />
+    <Compile Include="DAO\Diagnostico_medicoDAO.cs" />
+    <Compile Include="DAO\Especialidade_veterinariaDAO.cs" />
+    <Compile Include="DAO\FuncionariosDAO.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\ProdutosClienteDAO.cs" />
+    <Compile Include="DAO\ProdutosDAO.cs" />
+    <Compile Include="DAO\raca_animalDAO.cs" />
+    <Compile Include="DAO\ConsultasClienteDAO.cs" />
+    <Compile Include="DAO\ServicosDAO.cs" />
+    <Compile Include="DAO\StatusPagamentoDAO.cs" />
+    <Compile Include="DAO\tipo_animalDAO.cs" />
+    <Compile Include="DAO\VacinasDAO.cs" />
+    <Compile Include="DAO\VeterinariosDAO.cs" />
+    <Compile Include="Formularios\Form_Cadastro_tipo_animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Cadastro_tipo_animal.Designer.cs">
+      <DependentUpon>Form_Cadastro_tipo_animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_consulta.Designer.cs">
+      <DependentUpon>Form_consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_consultaVeterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_consultaVeterinario.Designer.cs">
+      <DependentUpon>Form_consultaVeterinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_diagnosticos_gerais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_diagnosticos_gerais.Designer.cs">
+      <DependentUpon>Form_diagnosticos_gerais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_diagnostico_medico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_diagnostico_medico.Designer.cs">
+      <DependentUpon>Form_diagnostico_medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_log.Designer.cs">
+      <DependentUpon>Form_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\form_prodServ_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\form_prodServ_cliente.Designer.cs">
+      <DependentUpon>form_prodServ_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_produtos_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_produtos_cliente.Designer.cs">
+      <DependentUpon>Form_produtos_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_servicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_servicos.Designer.cs">
+      <DependentUpon>Form_servicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Rel_Cliente_animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Rel_Cliente_animal.Designer.cs">
+      <DependentUpon>Form_Rel_Cliente_animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_cadastrar_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_cadastrar_login.Designer.cs">
+      <DependentUpon>Form_cadastrar_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Funcionario.Designer.cs">
+      <DependentUpon>Form_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_splash_screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_splash_screen.Designer.cs">
+      <DependentUpon>Form_splash_screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_tipo_pagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_tipo_pagamento.Designer.cs">
+      <DependentUpon>Form_tipo_pagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_veterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_veterinario.Designer.cs">
+      <DependentUpon>Form_veterinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_busca_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_busca_cliente.Designer.cs">
+      <DependentUpon>Form_busca_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_cliente.Designer.cs">
+      <DependentUpon>Form_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnimaisCliente.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\Consultas.cs" />
+    <Compile Include="Models\Diagnostico_medico.cs" />
+    <Compile Include="Models\Especializacao_veterinaria.cs" />
+    <Compile Include="Models\Funcionarios.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Produtos.cs" />
+    <Compile Include="Models\ProdutosCliente.cs" />
+    <Compile Include="Models\raca_animal.cs" />
+    <Compile Include="Models\Servicos.cs" />
+    <Compile Include="Models\ConsultasCliente.cs" />
+    <Compile Include="Models\StatusPagamento.cs" />
+    <Compile Include="Models\tipo_animal.cs" />
+    <Compile Include="Models\Vacinas.cs" />
+    <Compile Include="Models\Veterinarios.cs" />
+    <Compile Include="petshop_2020DataSet.cs">
+      <DependentUpon>petshop_2020DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="petshop_2020DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>petshop_2020DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="petshop_2020DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>petshop_2020DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\Form_relatorio_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Form_relatorio_clientes.Designer.cs">
+      <DependentUpon>Form_relatorio_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="Formularios\Form_Cadastro_tipo_animal.resx">
+      <DependentUpon>Form_Cadastro_tipo_animal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_consulta.resx">
+      <DependentUpon>Form_consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_consultaVeterinario.resx">
+      <DependentUpon>Form_consultaVeterinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_diagnosticos_gerais.resx">
+      <DependentUpon>Form_diagnosticos_gerais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_diagnostico_medico.resx">
+      <DependentUpon>Form_diagnostico_medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_log.resx">
+      <DependentUpon>Form_log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\form_prodServ_cliente.resx">
+      <DependentUpon>form_prodServ_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_produtos_cliente.resx">
+      <DependentUpon>Form_produtos_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_servicos.resx">
+      <DependentUpon>Form_servicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Rel_Cliente_animal.resx">
+      <DependentUpon>Form_Rel_Cliente_animal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_cadastrar_login.resx">
+      <DependentUpon>Form_cadastrar_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Funcionario.resx">
+      <DependentUpon>Form_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_splash_screen.resx">
+      <DependentUpon>Form_splash_screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_tipo_pagamento.resx">
+      <DependentUpon>Form_tipo_pagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_veterinario.resx">
+      <DependentUpon>Form_veterinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_busca_cliente.resx">
+      <DependentUpon>Form_busca_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_cliente.resx">
+      <DependentUpon>Form_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\Form_relatorio_clientes.resx">
+      <DependentUpon>Form_relatorio_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\report_produtos.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_raca_atualizado.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_clientes.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_consultas.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_funcionarios.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_login.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_raca.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_relacionamento_clienteAnimal.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_servicos.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_tipo.rdlc" />
+    <EmbeddedResource Include="Relatorios\report_veterinarios.rdlc" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\AtendeClienteService.wsdl" />
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.clienteERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.contratoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.dimensaoTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.enderecoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.mensagemParametrizadaTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.retornoCancelamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.servicoAdicionalTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.servicoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.statusCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.statusPlp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.tipoEmbalagem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCorreios\Consultas_medicas.WebServiceCorreios.valePostal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="petshop_2020DataSet.xsc">
+      <DependentUpon>petshop_2020DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="petshop_2020DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>petshop_2020DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="petshop_2020DataSet.xss">
+      <DependentUpon>petshop_2020DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="petshop_2020DataSet1.xsc">
+      <DependentUpon>petshop_2020DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="petshop_2020DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>petshop_2020DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="petshop_2020DataSet1.xss">
+      <DependentUpon>petshop_2020DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Cad_consulta.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Consulta_appDataSetTableAdapters.ConsultaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Consulta_appDataSetTableAdapters.MedicoTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Consulta_appDataSetTableAdapters.PacienteTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Consulta_appDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Consulta_appDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.DAO.ClientesDAO.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.AnimaisCliente.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Clientes.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Consultas.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Funcionarios.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Login.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.raca_animal.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Servicos.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.tipo_animal.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Models.Veterinarios.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Consultas_medicas.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.ConsultaDataTable.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.ConsultaRow.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.ConsultaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.ConsultaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.MedicoDataTable.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.MedicoRow.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.MedicoRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.MedicoRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.PacienteDataTable.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.PacienteRow.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.PacienteRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Consulta_appDataSet.PacienteRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Form_medico.datasource" />
+    <None Include="Properties\DataSources\Form_paciente.datasource" />
+    <None Include="Properties\DataSources\Menu_principal.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataReader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlError.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlHelper.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScript.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlStatementExecutedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTrace.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTransaction.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlConversionException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDateTime.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDecimal.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_pata2_60x60_esquerdo.png" />
+    <None Include="Resources\img_pata2_60x60_direito.png" />
+    <None Include="Resources\img_pata2_60x60_cima.png" />
+    <None Include="Resources\img_pata2_60x60_baixo.png" />
+    <None Include="Resources\img_pata2.png" />
+    <None Include="Resources\img_pata_60x60.png" />
+    <None Include="Resources\img_pata.png" />
+    <None Include="Resources\img_voltar_30px.png" />
+    <None Include="Resources\img_editar_30px.png" />
+    <None Include="Resources\interrogacao.png" />
+    <None Include="Resources\Slide1.PNG" />
+    <None Include="Resources\Slide1.JPG" />
+    <None Include="Resources\Img_splash_screen2.JPG" />
+    <None Include="Resources\Img_splash_screen.JPG" />
+    <None Include="Connected Services\WebServiceCorreios\configuration91.svcinfo" />
+    <None Include="Connected Services\WebServiceCorreios\configuration.svcinfo" />
+    <None Include="Connected Services\WebServiceCorreios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\seta_20px.png" />
+    <None Include="Resources\pesquisar_imagem_30px.png" />
+    <None Include="Resources\ok_imagem2_50px.png" />
+    <None Include="Resources\editar_imagem_30px.png" />
+    <None Include="Resources\editar_30px.png" />
+    <None Include="Resources\cancelar_30px.png" />
+    <None Include="Resources\Cancel_imagem_30px.png" />
+    <None Include="Imagens\logOpET_OF.png" />
+    <None Include="Imagens\LOGOnomePet.png" />
+    <None Include="Resources\cadastroAnimal.png" />
+    <None Include="Resources\cadastroFuncionarios.png" />
+    <None Include="Resources\LOGOnomePet2.png" />
+    <None Include="Resources\LOGOnomePet.png" />
+    <None Include="Resources\desligar1.png" />
+    <None Include="Resources\pessoa-para-pessoa.png" />
+    <None Include="Resources\nova-janela.png" />
+    <None Include="Resources\lista-de-saude-do-gato.png" />
+    <None Include="Resources\excluir.png" />
+    <None Include="Resources\dominio.png" />
+    <None Include="Resources\desligar.png" />
+    <None Include="Resources\logOpET_OF1.png" />
+    <None Include="Resources\logOpET_OF.png" />
+    <None Include="Icones\minimizar m.png" />
+    <None Include="Icones\minimizar.png" />
+    <None Include="Icones\fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WebServiceCorreios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-right-arrow-icon-png-image_4224405.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maquinha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

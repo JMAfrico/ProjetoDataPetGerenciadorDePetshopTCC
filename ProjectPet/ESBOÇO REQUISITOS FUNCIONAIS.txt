@@ -1,0 +1,5 @@
+cliente baixa o programa, 
+
+1)A= no menu de login, onde acessa com login senha , se login e senha estiver correto, abre uma mensagem dizendo que o login foi efetuado. Senão abre a mensagem login ou senha incorreto
+    B= tem a opção fazer cadastro , onde ao apertar abre um cadastro simples com os dados, assim que cadastrado, a janela volta para o menu de login e senha para dar acesso ao usuario que acabou de se cadastrar
+

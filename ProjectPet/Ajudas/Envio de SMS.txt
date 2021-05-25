@@ -1,0 +1,20 @@
+1- Relacionamento entre as duas tabelas
+ja mato a tabela do cliente e da consulta
+2-apresentar os dados da consulta no 
+datagrid view do menu principal
+3-enviar sms para o celular
+4-fazer as validações dos campos das tabelas
+
+https://social.msdn.microsoft.com/Forums/pt-BR/0b62f4ac-d0f8-450e-9664-27fe72049311/aceitar-s-letras-maisculas?forum=vscsharppt
+
+http://www.linhadecodigo.com.br/artigo/3206/enviando-sms-via-csharp.aspx
+
+https://social.msdn.microsoft.com/Forums/pt-BR/8970cc07-33db-4894-8816-1762d4aa43e0/iniciar-todas-as-palavras-textbox-em-maiuscula-c?forum=vscsharppt
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.windows.forms.textbox.charactercasing?view=netframework-4.8
+
+https://social.msdn.microsoft.com/Forums/pt-BR/3ea31015-859d-4ba4-89dd-d40997b5ef8f/textbox-aceitar-s-numeros?forum=vscsharppt
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.windows.controls.textbox.maxlength?view=netframework-4.8
+
+https://www.youtube.com/watch?v=gCaaQqVQMK0&list=PLS1QulWo1RIZrmdggzEKbhnfvCMHtT-sA&index=6

@@ -1,0 +1,7 @@
+int i = 0;
+foreach
+ 
+string x = listview[i].subitem[0].tostring // guarda o texto da linha e coluna na variavel
+txtRelata.text = x;
+consulta.cod_servico = txtRelacto.selectedvalue;
+salvar(consulta)

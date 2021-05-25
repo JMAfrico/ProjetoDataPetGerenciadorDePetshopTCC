@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Exercicio49
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Nome: João Marcos Africo da Silva
+            //RA: 1550781821028
+            //Data: 30/04/2019
+            //Exercício: 49
+
+            //Declaração e Instancia de variaveis
+            int[] vetor = new int[12];
+            int[,] MatrizA = new int[12 , 12];
+            int i;
+
+            Console.WriteLine("Digite 10 valores para ser calculado sua tabuada");
+
+            //Entrada de dados no vetor//
+            for (i = 1; i < 11; i++)
+            {
+                Console.Write("Digite o "+i+ " valor : ");
+                vetor[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("--------------------------");
+
+            //Calculo na matriz
+            for(i = 1; i< 11; i++)//linha
+            {
+                for (int j = 1; j < 11; j++)//coluna
+                {
+                    MatrizA[i, j] = (vetor[i] * j);
+                }
+            }
+
+            //Exibição na matriz
+            for (i = 1; i < 11; i++)//linha
+            {
+                Console.Write("\t");
+                Console.WriteLine("TABUADA DO " + vetor[i]);
+                for (int j = 1; j < 11; j++)//coluna
+                {
+                    Console.WriteLine(vetor[i]+"*"+j+"= " + MatrizA[i, j]);
+                }
+                Console.Write("---------------");
+            }
+            Console.ReadKey();
+        }
+    }
+}

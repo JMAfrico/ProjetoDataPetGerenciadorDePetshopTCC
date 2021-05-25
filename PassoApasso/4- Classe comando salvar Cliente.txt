@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Consultas_medicas.Models;
+using MySql.Data.MySqlClient;
+using System.Data;
+
+namespace Consultas_medicas.DAO
+{
+    public class ClientesDAO : conexao
+    {
+        MySqlCommand comando = null;
+
+        // INSERIR CLIENTE
+
+
+        public void Salvar(Clientes clientes)
+        { 
+            try
+            {
+                AbrirConexao();
+
+                    comando = new MySqlCommand("INSERT INTO tb_cliente(CodAnimal,nomeCliente,emailCliente,TelefoneCelularCli,TelefoneFixoCli,enderecoCliente,numeroResidenciaCliente,bairroCliente,cepCliente,complementoCliente,cpfCliente)VALUES (@CodAnimal,@nomeCliente,@emailCliente,@TelefoneCelularCli,@TelefoneFixoCli,@enderecoCliente,@numeroResidenciaCliente,@bairroCliente,@cepCliente,@complementoCliente,@cpfCliente)", conection);
+                    comando.Parameters.AddWithValue("@CodAnimal", clientes.CodAnimal);
+                    comando.Parameters.AddWithValue("@nomeCliente", clientes.nomeCliente);
+                    comando.Parameters.AddWithValue("@emailCliente", clientes.emailCliente);
+                    comando.Parameters.AddWithValue("@TelefoneCelularCli", clientes.telefoneCelularCli);
+                    comando.Parameters.AddWithValue("@TelefoneFixoCli", clientes.telefoneFixoCli);
+                    comando.Parameters.AddWithValue("@enderecoCliente", clientes.enderecoCliente);
+                    comando.Parameters.AddWithValue("@numeroResidenciaCliente", clientes.numeroResidenciaCliente);
+                    comando.Parameters.AddWithValue("@bairroCliente", clientes.bairroCliente);
+                    comando.Parameters.AddWithValue("@cepCliente", clientes.cepCliente);
+                    comando.Parameters.AddWithValue("@complementoCliente", clientes.ComplementoCliente);
+                    comando.Parameters.AddWithValue("@cpfCliente", clientes.cpfCliente);
+
+                    comando.ExecuteNonQuery();
+                
+                
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                FecharConexao();
+            }
+
+            

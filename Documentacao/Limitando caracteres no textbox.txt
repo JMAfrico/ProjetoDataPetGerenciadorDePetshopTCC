@@ -1,0 +1,27 @@
+            //não aceita delete, só no evento KeyDown
+            if (e.KeyCode == Keys.Delete)
+            {
+                e.Handled = true;
+            }
+
+	não aceita letras,nem numero, nem backspace , só no evento KeyPress
+            //não aceita backspace
+            if (e.KeyChar == (char)8)
+            {
+                e.Handled = true;
+            }
+
+            //não aceita letras
+            if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
+            {
+
+                e.Handled = true;
+            }
+
+            //não aceita números
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+
+                e.Handled = true;
+
+            }

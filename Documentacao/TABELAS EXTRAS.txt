@@ -1,0 +1,40 @@
+-pesquisar pelo txtbox a consulta
+-adicionar forma de pagamento
+-adicionar idade,vacinas, algum histórico de cirugia e doencas em longtext
+
+
+
+
+site : https://www.petz.com.br/blog/cachorros/saude-e-cuidados-cachorros/vacina-de-cachorro/
+
+ESPECIALIDADES VETERINARIAS
+
+acupuntura
+cardiologia
+Comportamento animal
+Dermatologia
+Endocrinologia
+Fisioterapia
+Hematologia
+Homeopatia
+Nefrologia
+Neurologia
+Nutrologia
+Odontologia
+Oftalmologia
+Ortopedia
+Pediatria
+
+TIPOS DE VACINAS PARA PETS
+
+-INCLUIR IDADE
+
+Vacina antirrábica
+Vacina múltipla ou polivalente (V8 e V10)
+Vacina contra a giardíase
+Vacina contra a gripe canina
+Vacina contra a leishmaniose
+
+TIPOS DE PAGAMENTOS PARA CONSULTAS E PRODUTOS
+
+Débito/crédito/2x/3x/4x

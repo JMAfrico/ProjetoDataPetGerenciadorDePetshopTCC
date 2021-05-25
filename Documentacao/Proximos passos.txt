@@ -1,0 +1,23 @@
+-na hora de cadastrar uma nova consulta, aparecer uma janela com a tabela de clientes, e ao dar dois cliques, o cliente é selecionario, podendo buscar ele por cpf ou nome OK
+
+-ao escolher o animal, aparecer a opção de escolher mais de um animal para o cliente OK
+
+-Na hora de salvar a consulta, aparecer os animais que aquele cliente tem cadastrado, aparecer pelo nome do pet,tipo e pela raça. OK
+
+-mudar o método de busca pelo cep,esse método está bugado.(pegar o método da pizzaria) OK
+
+-implementar relatórios-OK
+
+-Na tabela de animais,cada cliente possui um animal, esse animal deve possuir suas caracteristicas(criar campos na tabela animal)OK
+
+-Criar tabela de serviços e preços, fazer uma soma dos valores de acordo com o tamanho do pet e na hora de salvar a consulta mostrar em uma resumo essas informações OK
+
+-Ao apertar com o botão direito numa consulta, ter a opção de exclui-lá ou altera-la (MUDANÇA DE IDÉIA)
+
+-Ao apertar enter na tela de login, validar o acesso OK
+
+-diminuir o horário na tela, para mais espaço para concluir a consulta OK
+
+-criar um formulario para sim ou não exclusivo
+
+-depois de criar um novo cliente, perguntar se quer adicionar algum animal ao cliente, e na tabela de clientesao clicar com o botão direito aparecer a opcção de adicionar um novo animal,  

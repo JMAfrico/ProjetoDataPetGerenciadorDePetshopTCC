@@ -1,0 +1,40 @@
+Seguinte Angelo, Você pode Criar as propriedades dos campos que vc quer retornar e criar um construtor para ela com os mesmo parametros que serão passados para as propriedades.
+
+ 
+
+O Construtor é como se fosse um método, com o mesmo nome da classe:
+
+ 
+
+  public class Banco
+  {
+   public string Usuario { get; set; }
+   public string Senha { get; set; }
+
+   public Banco(string Usu, string Sen)
+   {
+    Usuario = Usu;
+    Senha = Sen;
+   }
+  }
+ 
+
+Dentro do Seu form, na chamada da classe você passa os Valores:
+
+ 
+
+ 
+
+Banco = bco = new Banco(txtUsuario.Text, txtSenha.Text);
+ 
+
+
+Ai dentro da classe você utiliza as propriedades criadas ao inves dos campos do form:
+
+ 
+
+No lugar de txtUsuario.Text coloque USUARIO, por exemplo.
+
+ 
+
+Espero ter ajudado

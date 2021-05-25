@@ -1,0 +1,5 @@
+PROBLEMA ENCONTRADOS NO MOMENTO
+
+-Não consigo fazer Update na tabela raca de animais
+-Tabela de associar cliente a animal, a raça fica errada depois de salvar
+-Ainda não alterei a classe de localizar CEP (corrigido)
