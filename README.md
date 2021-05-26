@@ -22,9 +22,9 @@ Diagramas para criação do Projeto:
 Funcionalidades do sistema:
 -CRUD de Clientes,Funcionarios,Veterinários,Animais,Produtos e serviços 
 -Marcar consultas e dar diagnósticos dos pets
--Validação de CPF, CEP
--Envio de email via Web Service Correios
--Criação de relatórios em Excel e PDF
+-Validação de CPF, CEP via Web Service Correios
+-Envio de email confirmando consulta
+-Criação de relatórios em Excel e PDF (ItextSharp)
 
 
 
